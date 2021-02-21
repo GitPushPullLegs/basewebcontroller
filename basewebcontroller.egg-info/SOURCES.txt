@@ -1,0 +1,10 @@
+README.md
+setup.py
+basewebcontroller/__init__.py
+basewebcontroller/basewebcontroller.py
+basewebcontroller/errors.py
+basewebcontroller.egg-info/PKG-INFO
+basewebcontroller.egg-info/SOURCES.txt
+basewebcontroller.egg-info/dependency_links.txt
+basewebcontroller.egg-info/requires.txt
+basewebcontroller.egg-info/top_level.txt
