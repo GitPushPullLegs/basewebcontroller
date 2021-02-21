@@ -1,9 +1,8 @@
 from setuptools import setup, find_packages
-from basewebcontroller import __version__
 
 setup(
     name='basewebcontroller',
-    version=__version__,
+    version='0.0.1',
     description='A base package for my web controllers.',
     url='https://github.com/GitPushPullLegs/basewebcontroller',
     author='Joe Aguilar',
