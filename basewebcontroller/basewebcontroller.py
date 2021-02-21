@@ -14,10 +14,10 @@ class BaseWebController:
         default download path. If specified but doesn't exist, will create the directory. Must be set in order to download headless.
         """
         if driver:
-            if isinstance(driver, webdriver.chrome.webdriver.WebDriver): # Catch subclass of selenium webdriver.
+            if isinstance(driver, webdriver.chrome.webdriver.WebDriver):  # Catch subclass of selenium webdriver.
                 self.driver = driver
             else:
-                self.driver = driver.driver # If a subclass of this object or Webbot.
+                self.driver = driver.driver  # If a subclass of this object or Webbot.
             return
 
         options = webdriver.ChromeOptions()
@@ -41,8 +41,14 @@ class BaseWebController:
 
         if isinstance(download_path, str):
             self.driver.command_executor._commands["send_command"] = ("POST", '/session/$sessionId/chromium/send_command')
-            params = {'cmd': 'Page.setDownloadBehavior', 'params': {'behavior': 'allow', 'downloadPath': self.absolute_download_path}}
-            command_result = self.driver.execute("send_command", params)
+            params = {
+                'cmd': 'Page.setDownloadBehavior',
+                'params': {
+                    'behavior': 'allow',
+                    'downloadPath': self.absolute_download_path
+                }
+            }
+            self.driver.execute("send_command", params)
 
         welcome_path = os.path.join(os.path.split(__file__)[0], f'html{os.path.sep}welcome.html')
         self.driver.get(welcome_path)
