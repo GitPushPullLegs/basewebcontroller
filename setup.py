@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='basewebcontroller',
-    version='0.0.1',
+    version='0.0.2',
     description='A base package for my web controllers.',
     url='https://github.com/GitPushPullLegs/basewebcontroller',
     author='Joe Aguilar',
