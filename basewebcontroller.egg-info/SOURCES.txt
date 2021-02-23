@@ -1,3 +1,4 @@
+MANIFEST.in
 README.md
 setup.py
 basewebcontroller/__init__.py
@@ -8,3 +9,5 @@ basewebcontroller.egg-info/SOURCES.txt
 basewebcontroller.egg-info/dependency_links.txt
 basewebcontroller.egg-info/requires.txt
 basewebcontroller.egg-info/top_level.txt
+basewebcontroller/drivers/chromedriver.exe
+basewebcontroller/html/welcome.html
